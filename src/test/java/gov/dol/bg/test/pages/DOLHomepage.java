@@ -1,4 +1,4 @@
-package gov.benefits.bg.test.pages;
+package gov.dol.bg.test.pages;
 
 
 import java.util.concurrent.TimeUnit;
@@ -17,12 +17,12 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 
 @DefaultUrl("http://www.dol.gov")
-public class BGPage extends PageObject {
+public class DOLHomepage extends PageObject {
     
 	private String env = System.getProperty("environment");
 	public String defaultUrl = "http://" + env + ".dol.gov";
 	
-	public BGPage(WebDriver driver) {
+	public DOLHomepage(WebDriver driver) {
 		super(driver);
 		driver.manage().window().maximize();
 
@@ -38,31 +38,33 @@ public class BGPage extends PageObject {
 	
 	//main nav
 	@FindBy(xpath = "//*[@id='topicsMenu']/a")
-    public WebElementFacade topicsNav;
+    public WebElementFacade topicsNavButton;
 	
 	@FindBy(xpath = "//*[@id='agenciesMenu']/a")
-	public WebElementFacade agenciesNav;
+	public WebElementFacade agenciesNavButton;
 	
 	@FindBy(xpath = "//*[@id='formsMenu']/a")
-	public WebElementFacade formsNav;
+	public WebElementFacade formsNavButton;
 	
 	@FindBy(xpath = "//*[@id='faqMenu']/a")
-	public WebElementFacade faqNav;
+	public WebElementFacade faqNavButton;
 	
 	@FindBy(xpath = "//*[@id='aboutMenu']/a")
-	public WebElementFacade aboutNav;
+	public WebElementFacade aboutNavButton;
 	
 	@FindBy(xpath = "//*[@id='pressMenu']/a")
-	public WebElementFacade pressNav;
+	public WebElementFacade pressNavButton;
 	
 	@FindBy(xpath = "//*[@id='contactMenu']/a")
-	public WebElementFacade contactNav;
+	public WebElementFacade contactNavButton;
 	
-	//sub nav
+	//sub nav - Topics
     
-	
-	@FindBy(xpath = "//*[@id='cd-primary-nav-mobile']/li[2]/ul/li[3]/ul/li[1]/a")
-	public WebElementFacade breaksAndMealPeriodsNav;
+	@FindBy(xpath = "//*[@id='topicsMenu']/div/div[1]/div/div/div/div/ul/li[1]/div/span/a")
+	public WebElementFacade breaksAndMealPeriodsSubNavButton;
+	                 
+	@FindBy(xpath = "//*[@id=/'topicsMenu']/div/div[1]/div/div/div/div/ul/li[2]/div/span/a")
+	public WebElementFacade cobraSubNavButton;
 	
 	
     
@@ -70,32 +72,6 @@ public class BGPage extends PageObject {
 	
     // ***********************************************************************************
     // Functions
-    
-	//main nav
-    public void clickTopicsNav() {
-    	topicsNav.click();
-    }
-    public void clickAgenciesNav() {
-    	agenciesNav.click();
-    }
-    public void clickFormsNav() {
-    	formsNav.click();
-    }
-    public void clickFAQNav() {
-    	faqNav.click();
-    }
-    public void clickAboutNav() {
-    	aboutNav.click();
-    }
-    public void clickPressNav() {
-    	pressNav.click();
-    }
-    public void clickContactNav() {
-    	contactNav.click();
-    }
-    
-   
-    
     
     public String pullPageTitle() {
     	

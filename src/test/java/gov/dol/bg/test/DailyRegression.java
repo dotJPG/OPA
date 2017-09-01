@@ -1,4 +1,4 @@
-package gov.benefits.bg.test.steps;
+package gov.dol.bg.test;
 
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
@@ -6,7 +6,7 @@ import org.jbehave.core.annotations.Named;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
-import gov.benefits.bg.test.steps.serenity.User;
+//import gov.dol.bg.test.steps.serenity.User;
 
 public class DailyRegression {
 
@@ -29,5 +29,15 @@ public class DailyRegression {
 		user.shouldSeePage(navMenuItem);
 	}
     
+    //sub nav
+    @When("the user clicks on the <subNavMenuItem> within the top navigation bar")
+    public void when_user_clicks_on_each_sublink_in_the_top_navigation_bar(@Named("subNavMenuItem") String subNavMenuItem) {
+		user.clickNavNode(subNavMenuItem);
+	}
+
+    @Then("the <subNavMenuItem> page should open correctly")
+    public void then_the_sub_navigation_page_should_open_correctly(@Named("subNavMenuItem") String subNavMenuItem) {
+		user.shouldSeePage(subNavMenuItem);
+	}
 
 }
