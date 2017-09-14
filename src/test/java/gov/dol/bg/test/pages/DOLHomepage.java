@@ -63,11 +63,33 @@ public class DOLHomepage extends PageObject {
 	@FindBy(xpath = "//*[@id='topicsMenu']/div/div[1]/div/div/div/div/ul/li[1]/div/span/a")
 	public WebElementFacade breaksAndMealPeriodsSubNavButton;
 	                 
-	@FindBy(xpath = "//*[@id=/'topicsMenu']/div/div[1]/div/div/div/div/ul/li[2]/div/span/a")
+	@FindBy(xpath = "//*[@id='topicsMenu']/div/div[1]/div/div/div/div/ul/li[2]/div/span/a")
 	public WebElementFacade cobraSubNavButton;
 	
+	@FindBy(xpath = "//*[@id='cd-primary-nav-secondary-desktop']/li[7]/a")
+	public WebElementFacade disabilitySubNavButton;
 	
+	@FindBy(xpath = "//*[@id='cd-primary-nav-secondary-desktop']/li[20]/a")
+	public WebElementFacade retirementSubNavButton;
+	
+	//sub nav - Agencies 
+	
+	@FindBy(xpath = "(//*[@id='cd-primary-nav-secondary-desktop']/li[4]/a)[2]")
+	public WebElementFacade ilabSubNavButton;
+	
+	@FindBy(xpath = "(//*[@id='cd-primary-nav-secondary-desktop']/li[8]/a)[2]")
+	public WebElementFacade ebsaSubNavButton;
+	
+	//sub nav - Press
     
+	@FindBy(xpath = "(//*[@id='cd-primary-nav-secondary-desktop']/li[1]/a)[4]")
+	public WebElementFacade newsroomSubNavButton;
+		
+	@FindBy(xpath = "(//*[@id='cd-primary-nav-secondary-desktop']/li[2]/a)[4]")
+	public WebElementFacade newsreleaseSubNavButton;
+		
+	@FindBy(xpath = "(//*[@id='cd-primary-nav-secondary-desktop']/li[4]/a)[4]")
+	public WebElementFacade newsletterPlansSubNavButton;	
 
 	
     // ***********************************************************************************
@@ -75,20 +97,21 @@ public class DOLHomepage extends PageObject {
     
     public String pullPageTitle() {
     	
-    	System.out.println("Waiting for page title to load");
-        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='page-title']")));
-        
-        String windowUrl = getDriver().getCurrentUrl();
-        System.out.println("current window url is: " + windowUrl);
+//      System.out.println("Waiting for page title to load");
+//      WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+//      wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='page-title'] | //*[contains(@class,'large')]/h2 | //*[@class='page-header'])")));
+//      
+//      String windowUrl = getDriver().getCurrentUrl();
+//      System.out.println("current window url is: " + windowUrl);
 
-    	WebElement pageTitle = getDriver().findElement(By.xpath("//*[@class='page-title']"));
-		return pageTitle.getText();
+     WebElement pageTitle = getDriver().findElement(By.xpath("(//*[@class='page-title'] | //*[contains(@class,'large')]/h2 | //*[@class='page-header'])"));
+      return pageTitle.getText();
 	}
     
     
     public void clickSubNavButtons(WebElementFacade nav, WebElementFacade subNav) {
         Actions action = new Actions(getDriver());
+        System.out.println(subNav);
         action.moveToElement(nav).pause(1000).moveToElement(subNav).click().build().perform();
     }
     

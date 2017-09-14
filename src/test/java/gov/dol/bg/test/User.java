@@ -60,9 +60,41 @@ public class User {
 			dolHomepage.clickSubNavButtons(dolHomepage.topicsNavButton, dolHomepage.breaksAndMealPeriodsSubNavButton);
 			break;	
 			
-		case "Cobra": 
+		case "COBRA": 
 			dolHomepage.clickSubNavButtons(dolHomepage.topicsNavButton, dolHomepage.cobraSubNavButton);
 			break;	
+		
+		case "Disability Resources":
+			dolHomepage.clickSubNavButtons(dolHomepage.topicsNavButton, dolHomepage.disabilitySubNavButton);
+			break;
+		
+		case "Retirement Plans":
+			dolHomepage.clickSubNavButtons(dolHomepage.topicsNavButton,  dolHomepage.retirementSubNavButton);
+			break;
+			
+		//Sub nav - Agencies	
+			
+		case "ILAB":
+			dolHomepage.clickSubNavButtons(dolHomepage.agenciesNavButton, dolHomepage.ilabSubNavButton);
+			break;
+			
+		case "EBSA":
+			dolHomepage.clickSubNavButtons(dolHomepage.agenciesNavButton, dolHomepage.ebsaSubNavButton);
+			break;		
+			
+	    	//Sub nav - Press
+    		
+	   	case "Newsroom": 
+	   		dolHomepage.clickSubNavButtons(dolHomepage.pressNavButton, dolHomepage.newsroomSubNavButton);
+	   		break;	
+	    			
+	   	case "News Release": 
+	   		dolHomepage.clickSubNavButtons(dolHomepage.pressNavButton, dolHomepage.newsreleaseSubNavButton);
+    		break;	
+	    		
+	    case "News Letter": 
+	   		dolHomepage.clickSubNavButtons(dolHomepage.pressNavButton, dolHomepage.newsletterPlansSubNavButton);
+	   		break;	
 			
 			
 			
@@ -80,8 +112,10 @@ public class User {
 		//case "welcome to benefits.gov":
 		
 		case "Topics": 
+			Assert.assertEquals("Topics", dolHomepage.pullPageTitle());
+			break;
 		case "Forms":
-			Assert.assertEquals(expectedPageName, dolHomepage.pullPageTitle());
+			Assert.assertEquals("Forms", dolHomepage.pullPageTitle());
 			break;
 		case "Agencies":
 			Assert.assertEquals("Agencies & Programs", dolHomepage.pullPageTitle());
@@ -98,10 +132,57 @@ public class User {
 		case "FAQ":
 			break;
 			
+		// sub Nav topics
+		case "Breaks and Meal Periods":
+			Assert.assertEquals("Breaks and Meal Periods", dolHomepage.pullPageTitle());
+			break;
+
+		case "COBRA":
+			Assert.assertEquals("Health Plans & Benefits: Continuation of Health Coverage - COBRA", dolHomepage.pullPageTitle());
+			break;
+
+		case "Disability Resources":
+			Assert.assertEquals("Disability Resources", dolHomepage.pullPageTitle());
+			break;			
+			
+		case "Retirement Plans":
+			Assert.assertEquals("Retirement Plans-Benefits & Savings", dolHomepage.pullPageTitle());
+			break;	
+			
+		//sub Nav Agencies 	
+			
+		case "ILAB":
+			Assert.assertEquals("Bureau Of International Labor Affairs", dolHomepage.pullPageTitle());
+			break;
+			
+		case "EBSA":
+			Assert.assertEquals("Employee Benefits Security Administration", dolHomepage.pullPageTitle());
+			break;			
+		
+			//case subNav Press
+		case "Newsroom":
+			Assert.assertEquals("Newsroom", dolHomepage.pullPageTitle());
+			break;
+		case "News Release":
+			Assert.assertEquals("News Releases", dolHomepage.pullPageTitle());
+			break;
+		case "News Letter":
+			Assert.assertEquals("DOL Newsletter", dolHomepage.pullPageTitle());
+			break;			
+		
+		
 		default:
 			System.err.println("INVALID PAGE SENT");
 			break;
+			
+
+			
+			
 		} 
+		
+		
+		
+		
 	}
 
 }
