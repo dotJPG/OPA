@@ -58,3 +58,37 @@ Examples:
 |Newsroom|
 |News Release|
 |News Letter|
+
+Scenario: Verify all of the Footer navigation links open correctly
+Meta:
+Given the user is on the DOL home page
+When the user clicks on the <navFooterItem> within the Footer
+Then the <navFooterItem> page should open correctly
+
+Examples:
+|navFooterItem|
+|RSS|
+|Disclaimer|
+|NFA|
+|PSS|
+|FOIA|
+|TTY|
+
+Scenario: Verify all of the Social Media navigation links open correctly
+Meta: 
+Given the user is on the DOL home page
+When the user clicks on the <socMediaLink> link
+Then the <socMediaLink> page should open correctly
+
+Examples:
+|socMediaLink|
+|Twitter|
+|Facebook|
+|LinkedIn|
+|YouTube|
+|Email|
+
+
+
+
+

@@ -63,6 +63,136 @@ public class DailyRegression {
 	}
     
     
-    
+    //Footer
+    @When("the user clicks on the <navFooterItem> within the Footer")
+    public void the_user_clicks_on_the_navFooterItem_within_the_Press_navigation_bar(@Named("navFooterItem") String navFooterItem) {
+		user.clickNavNode(navFooterItem);
+	}
 
+    @Then("the <navFooterItem> page should open correctly")
+    public void the_navFooterItem_page_should_open_correctly(@Named("navFooterItem") String navFooterItem) {
+		user.shouldSeePage(navFooterItem);
+	}
+
+    //Social Media
+    @When("the user clicks on the <socMediaLink> link")
+    public void the_user_clicks_on_the_navFooterItem_within_the_Press_navigation_barr(@Named("socMediaLink") String socMediaLink) {
+		user.clickNavNode(socMediaLink);
+	}
+
+    @Then("the <socMediaLink> page should open correctly")
+    public void the_navFooterItem_page_should_open_correctlyy(@Named("socMediaLink") String socMediaLink) {
+		user.shouldSeePage(socMediaLink);
+	}
+    
+    
+    //ILAB Homepage
+    //******************************************************************************************************//
+    @Given("the user is on the ILAB home page")
+    public void the_user_is_on_ihomepage() {
+        user.onILABPage();
+    }
+    
+    @When("the user clicks on <aboutUsMenuItem> within the top nav bar")
+    public void when_I_click_on_each_link_in_the_top_nav_bar(@Named("aboutUsMenuItem") String aboutUsMenuItem) {
+		user.clickNavNode(aboutUsMenuItem);
+	}
+    @Then("the <aboutUsMenuItem> pages should open correctly")
+    public void then_the_nav_tab_should_open_correctly(@Named("aboutUsMenuItem") String aboutUsMenuItem) {
+		user.shouldSeePage(aboutUsMenuItem);
+	}
+    
+    @When("the user clicks on <ourWorkMenuItem> within the top nav panel")
+    public void when_I_click_on_each_link_in_the_top_nav_panel(@Named("ourWorkMenuItem") String ourWorkMenuItem) {
+		user.clickNavNode(ourWorkMenuItem);
+	}
+    @Then("the <ourWorkMenuItem> pages should open correctlyy")
+    public void then_the_nav_tab_should_open_correctlyy(@Named("ourWorkMenuItem") String ourWorkMenuItem) {
+		user.shouldSeePage(ourWorkMenuItem);
+	}
+    
+    @When("the user clicks on <resourcesMenuItem> within the top nav panel")
+    public void when_I_click_on_each_link_in_the_resources_panel(@Named("resourcesMenuItem") String resourcesMenuItem) {
+		user.clickNavNode(resourcesMenuItem);
+	}
+    @Then("the <resourcesMenuItem> pages should open correctlyy")
+    public void then_the_resource_should_open_correctlyy(@Named("resourcesMenuItem") String resourcesMenuItem) {
+		user.shouldSeePage(resourcesMenuItem);
+	}
+    
+    @When("the user clicks on <actionMenuItem> within the top nav panel")
+    public void when_I_click_on_each_link_in_the_action_panel(@Named("actionMenuItem") String actionMenuItem) {
+		user.clickNavNode(actionMenuItem);
+	}
+    @Then("the <actionMenuItem> pages should open correctlyy")
+    public void then_the_action_should_open_correctlyy(@Named("actionMenuItem") String actionMenuItem) {
+		user.shouldSeePage(actionMenuItem);
+	}
+    
+    
+    //EBSA Homepage
+    //******************************************************************************************************//
+    @Given("the user is on the EBSA home page")
+    public void the_user_is_on_ehomepage() {
+        user.onEBSAPage();
+    }
+    
+    @When("the user clicks on <ebsaMenuItem> within the top nav bar")
+    public void when_I_click_on_each_link_in_the_top_nav(@Named("ebsaMenuItem") String ebsaMenuItem) {
+		user.clickNavNode(ebsaMenuItem);
+	}
+    @Then("the <ebsaMenuItem> pages should open correctly")
+    public void then_the_ebsa_tab_should_open_correctly(@Named("ebsaMenuItem") String ebsaMenuItem) {
+		user.shouldSeePage(ebsaMenuItem);
+	}
+ 
+    @When("the user clicks on <aboutUsMenuItem> within the About Us tab")
+    public void when_I_click_on_each_link_in_the_aboutUs_tab(@Named("aboutUsMenuItem") String aboutUsMenuItem) {
+		user.clickNavNode(aboutUsMenuItem);
+	}
+    @Then("the <aboutUsMenuItem> page should open correctly")
+    public void then_the_aboutUs_tab_should_open_correctly(@Named("aboutUsMenuItem") String aboutUsMenuItem) {
+		user.shouldSeePage(aboutUsMenuItem);
+	}
+    @When("the user clicks on <workFamMenuItem> within the Workers & Families tab")
+    public void when_I_click_on_each_link_in_the_workFam_tab(@Named("workFamMenuItem") String workFamMenuItem) {
+		user.clickNavNode(workFamMenuItem);
+	}
+    @Then("the <workFamMenuItem> page should open correctly")
+    public void then_the_workFam_tab_should_open_correctly(@Named("workFamMenuItem") String workFamMenuItem) {
+		user.shouldSeePage(workFamMenuItem);
+	}    
+    @When("the user clicks on <employerAdviserMenuItem> within the Employers & Advisers tab")
+    public void when_I_click_on_each_link_in_the_employerAdviser_tab(@Named("employerAdviserMenuItem") String employerAdviserMenuItem) {
+		user.clickNavNode(employerAdviserMenuItem);
+	}
+    @Then("the <employerAdviserMenuItem> page should open correctly")
+    public void then_the_employerAdviser_tab_should_open_correctly(@Named("employerAdviserMenuItem") String employerAdviserMenuItem) {
+		user.shouldSeePage(employerAdviserMenuItem);
+	}    
+    @When("the user clicks on <researchersMenuItem> within the Researchers tab")
+    public void when_I_click_on_each_link_in_the_researchers_tab(@Named("researchersMenuItem") String researchersMenuItem) {
+		user.clickNavNode(researchersMenuItem);
+	}
+    @Then("the <researchersMenuItem> page should open correctly")
+    public void then_the__tab_should_open_correctly(@Named("researchersMenuItem") String researchersMenuItem) {
+		user.shouldSeePage(researchersMenuItem);
+	}    
+    @When("the user clicks on <keyTopicMenuItem> within the Key Topics tab")
+    public void when_I_click_on_each_link_in_the_keyTopic_tab(@Named("keyTopicMenuItem") String keyTopicMenuItem) {
+		user.clickNavNode(keyTopicMenuItem);
+	}
+    @Then("the <keyTopicMenuItem> page should open correctly")
+    public void then_the__keyTopic_should_open_correctly(@Named("keyTopicMenuItem") String keyTopicMenuItem) {
+		user.shouldSeePage(keyTopicMenuItem);
+	}  
+    @When("the user clicks on <lawsregsMenuItem> within the Laws & Regulations tab")
+    public void when_I_click_on_each_link_in_the_lawsregs_tab(@Named("lawsregsMenuItem") String lawsregsMenuItem) {
+		user.clickNavNode(lawsregsMenuItem);
+	}
+    @Then("the <lawsregsMenuItem> page should open correctly")
+    public void then_the__lawsregs_should_open_correctly(@Named("lawsregsMenuItem") String lawsregsMenuItem) {
+		user.shouldSeePage(lawsregsMenuItem);
+	}  
+    
 }
