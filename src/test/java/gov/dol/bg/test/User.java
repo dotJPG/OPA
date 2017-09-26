@@ -182,41 +182,41 @@ public class User {
 	    //********************************************************************************//
 			
 	    //About Us
-	    case "MISSION":    	    	
+	    case "missionAndOffices":    	    	
 	    	ILABHomepage.clickSubNavButtons(ILABHomepage.aboutUsNavButton, ILABHomepage.missionSubNavButton);
 	    	break;
 
-	    case "LAWSANDREGS":
+	    case "lawsAndRegulations":
 	    	ILABHomepage.clickSubNavButtons(ILABHomepage.aboutUsNavButton, ILABHomepage.lawsAndRegsSubNavButton);
 	    	break;
-	    case "JOIN":
+	    case "joinTheTeam":
 	    	ILABHomepage.clickSubNavButtons(ILABHomepage.aboutUsNavButton, ILABHomepage.joinSubNavButton);
 	    	break;
 	    
 	    //Our Work
-	    case "CLABOR":
+	    case "childLabor":
 	    	ILABHomepage.clickSubNavButtons(ILABHomepage.ourWorkNavButton, ILABHomepage.claborSubNavButton);
 	    	break;
 	    
-	    case "PROJECTS":
+	    case "projects":
 	    	ILABHomepage.clickSubNavButtons(ILABHomepage.ourWorkNavButton, ILABHomepage.projectsSubNavButton);
 	    	break;
 	    
 	    //Resources
-	    case "REPORTS":
+	    case "reportsAndPublications":
 	    	ILABHomepage.clickSubSubNavButtons(ILABHomepage.resourcesNavButton, ILABHomepage.reportsSubNavButton, ILABHomepage.reportsSubSubNavButton);
 	    	break;
 	    
-	    case "GRANTS":
+	    case "grantsAndContracts":
 	    	ILABHomepage.clickSubNavButtons(ILABHomepage.resourcesNavButton, ILABHomepage.grantsSubNavButton);
 	    	break;
 	    	
 	    //ILAB in Action
-	    case "NEWS":
+	    case "newsReleases":
 	    	ILABHomepage.clickSubNavButtons(ILABHomepage.actionNavButton , ILABHomepage.actionNewsSubNavButton);
 	    	break;
 	    
-	    case "OURVOICES":
+	    case "ourRightsOurVoices":
 	    	ILABHomepage.clickSubNavButtons(ILABHomepage.actionNavButton, ILABHomepage.rightsvoicesSubNavButton);
 	    	break;	    	
 	    
@@ -225,30 +225,40 @@ public class User {
 	    	
 	    //Home and ASK
 	    	
-	    case "ASK":
+	    case "askEBSA":
 	    	ebsaHomepage.askNavButton.click();
 	    	break;
-	    case "HOME":
+	    case "ebsaHomepage":
 	    	ebsaHomepage.homeNavButton.click();
 	    	break;
 	    	
 	    //About EBSA
-	    case "ENFORCEMENT":
+	    case "enforcement":
 	    	ebsaHomepage.clickSubSubSubNavButtons(ebsaHomepage.aboutNavButton, ebsaHomepage.activitiesSubNavButton, ebsaHomepage.newsroomSubSubNavButton, ebsaHomepage.enforcementSubSubSubNavButton);
 	    	break;
 	    	
-	    case "ORGANIZATION":
+	    case "ourOrganization":
 	    	ebsaHomepage.clickSubSubNavButtons(ebsaHomepage.aboutNavButton, ebsaHomepage.aboutUsSubNavButton, ebsaHomepage.organizationSubSubNavButton);
 	    	break;
 	    
 	    //Workers & Families
-	    case "DISASTER":
+	    case "disasterRelief":
 	    	ebsaHomepage.clickSubNavButtons(ebsaHomepage.workersNavButton, ebsaHomepage.disasterSubNavButton);
 	    	break;
 	    
-	    case "DIVORCE":
+	    case "separationAndDivorce":
 	    	ebsaHomepage.clickSubNavButtons(ebsaHomepage.workersNavButton, ebsaHomepage.divorceSubNavButton);
 	    	break;
+	    	
+		    
+	    //Employers & Advisors
+	    case "abandonedPlans":
+	    	ebsaHomepage.clickSubSubNavButtons(ebsaHomepage.employersNavButton, ebsaHomepage.planSubNavButton, ebsaHomepage.abandonedplansSubSubNavButton);
+	    	break;
+	    
+	    case "reportingGuidelines":
+	    	ebsaHomepage.clickSubSubSubNavButtons(ebsaHomepage.employersNavButton, ebsaHomepage.smallbusinessSubNavButton, ebsaHomepage.complianceSubSubNavButton, ebsaHomepage.reportingSubSubSubNavButton);
+	    	break;	    	
 	    	
 	    //Researchers
 	    case "retirementResources":
@@ -273,7 +283,7 @@ public class User {
 	    	ebsaHomepage.clickSubSubNavButtons(ebsaHomepage.lawsNavButton, ebsaHomepage.lawsSubNavButton, ebsaHomepage.hippaSubSubNavButton);
 	    	break;
 	    	
-	    case "fedRegister":
+	    case "federalRegister":
 	    	ebsaHomepage.clickSubSubNavButtons(ebsaHomepage.lawsNavButton, ebsaHomepage.rulesSubNavButton, ebsaHomepage.fedRegisterSubSubNavButton);
 	    	break;	    	
 	    	
@@ -412,44 +422,44 @@ public class User {
 		//*************************************************************************************//
 		
 		//About Us
-		case "MISSION":
+		case "missionAndOffices":
 			Assert.assertEquals("Mission & Offices", ILABHomepage.pullPageTitle());
 			break;
 			
-		case "LAWSANDREGS":
+		case "lawsAndRegulations":
 			Assert.assertEquals("Laws and Regulations", ILABHomepage.pullPageTitle());
 			break;				
 			
-		case "JOIN":
+		case "joinTheTeam":
 			Assert.assertEquals("Join the Team", ILABHomepage.pullPageTitle());
 			break;
 			
 		
 		//Our Work
-		case "CLABOR":
+		case "childLabor":
 			Assert.assertEquals("Child Labor, Forced Labor & Human Trafficking", ILABHomepage.pullPageTitle());
 			break;
 				
-		case "PROJECTS":
+		case "projects":
 			Assert.assertEquals("Projects", ILABHomepage.pullPageTitle());
 			break;
 		
 		//Resources
-		case "REPORTS":
+		case "reportsAndPublications":
 			Assert.assertEquals("Reports & Publications", ILABHomepage.pullPageTitle());
 			break;	
 			
-		case "GRANTS":
+		case "grantsAndContracts":
 			Assert.assertEquals("Grants & Contracts", ILABHomepage.pullPageTitle());
 			break;			
 		
 		//In Action
-		case "NEWS":
-			Assert.assertEquals("News Releases", ILABHomepage.pullPageTitle());
+		case "newsReleases":
+			Assert.assertEquals("Newss Releases", ILABHomepage.pullPageTitle());
 			break;
 			
-		case "OURVOICES":
-			Assert.assertEquals("Our Rights, Our Voices", ILABHomepage.pullPageTitle());
+		case "ourRightsOurVoices":
+			Assert.assertEquals("Ourr Rights, Our Voices", ILABHomepage.pullPageTitle());
 			break;
 			
 			
@@ -459,29 +469,40 @@ public class User {
 			
 		//Home and ASK
 	    	
-	    case "ASK":
+	    case "askEBSA":
 	    	Assert.assertEquals("Ask EBSA", ebsaHomepage.pullPageTitle());
 	    	break;
-	    case "HOME":
+	    case "ebsaHomepage":
 	    	Assert.assertEquals("", ebsaHomepage.pullPageTitle());
 	    	break;
 	    	
 	    //About EBSA
-	    case "ENFORCEMENT":
+	    case "enforcement":
 	    	Assert.assertEquals("Joint Enforcement News Releases", ebsaHomepage.pullPageTitle());	    	
 	    	break;
 	    	
-	    case "ORGANIZATION":
+	    case "ourOrganization":
 	    	Assert.assertEquals("Organization Chart", ebsaHomepage.pullPageTitle());	    	
 	    	break;
-	    //Workers & Families
-	    case "DISASTER":
+	    
+	    	//Workers & Families
+	    case "disasterRelief":
 	    	Assert.assertEquals("Disaster Relief", ebsaHomepage.pullPageTitle());
 	    	break;
 	    
-	    case "DIVORCE":
+	    case "separationAndDivorce":
 	    	Assert.assertEquals("Separation & Divorce", ebsaHomepage.pullPageTitle());
 	    	break;	
+	   
+	    //Employers & Advisors
+	    case "abandonedPlans":
+	    	Assert.assertEquals("Abandoned Plans", ebsaHomepage.pullPageTitle());	    	
+	    	break;
+	    
+	    case "reportingGuidelines":
+	    	Assert.assertEquals("Reporting and Filing", ebsaHomepage.pullPageTitle());	    	
+	    	break;	    	
+	    	
 	    	
 	    	
 	    //Researchers	
@@ -507,7 +528,7 @@ public class User {
 	    	Assert.assertEquals("Health Insurance Portability and Accountability Act (HIPAA)", ebsaHomepage.pullPageTitle());	    	
 	    	break;
 	    	
-	    case "fedRegister":
+	    case "federalRegister":
 	    	Assert.assertEquals("Rules & Regulations", ebsaHomepage.pullPageTitle());	    	
 	    	break;	    
 	    

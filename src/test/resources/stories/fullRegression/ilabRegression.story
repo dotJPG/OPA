@@ -6,50 +6,50 @@ I want to run the daily regressions at least twice a day
 Meta: 
 
 Scenario: Verify all of the About Us tabs from the ILAB page
-Meta: 
+Meta: @skip
 Given the user is on the ILAB home page
-When the user clicks on <aboutUsMenuItem> within the top nav bar
-Then the <aboutUsMenuItem> pages should open correctly
+When the user clicks on <aboutUsMenuItem> within the About Us tab on the menu bar
+Then the <aboutUsMenuItem> page should open correctly
 
 Examples:
 |aboutUsMenuItem|
-|MISSION|
-|LAWSANDREGS|
-|JOIN|
+|missionAndOffices|
+|lawsAndRegulations|
+|joinTheTeam|
 
 Scenario: Verify all of the Our Work tabs from the ILAB page
-Meta: 
+Meta: @skip
 Given the user is on the ILAB home page
-When the user clicks on <ourWorkMenuItem> within the top nav panel
-Then the <ourWorkMenuItem> pages should open correctlyy
+When the user clicks on <ourWorkMenuItem> within the Our Work tab on the menu bar
+Then the <ourWorkMenuItem> page should open correctly
 
 Examples:
 |ourWorkMenuItem|
-|CLABOR|
-|PROJECTS|
+|childLabor|
+|projects|
 
 Scenario: Verify all of the Resources tabs from the ILAB page
-Meta: 
+Meta: @skip
 Given the user is on the ILAB home page
-When the user clicks on <resourcesMenuItem> within the top nav panel
-Then the <resourcesMenuItem> pages should open correctlyy
+When the user clicks on <resourcesMenuItem> within the Resources tab on the menu bar
+Then the <resourcesMenuItem> page should open correctly
 
 Examples:
 |resourcesMenuItem|
-|REPORTS|
-|GRANTS|
+|reportsAndPublications|
+|grantsAndContracts|
 
 
 Scenario: Verify all of the ILAB In Action tabs from the ILAB page
 Meta: 
 Given the user is on the ILAB home page
-When the user clicks on <actionMenuItem> within the top nav panel
-Then the <actionMenuItem> pages should open correctlyy
+When the user clicks on <actionMenuItem> within the ILAB In Action tab on the menu bar
+Then the <actionMenuItem> page should open correctly
 
 Examples:
 |actionMenuItem|
-|NEWS|
-|OURVOICES|
+|newsReleases|
+|ourRightsOurVoices|
 
 
 

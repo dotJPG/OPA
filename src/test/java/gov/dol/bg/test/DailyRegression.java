@@ -93,39 +93,39 @@ public class DailyRegression {
         user.onILABPage();
     }
     
-    @When("the user clicks on <aboutUsMenuItem> within the top nav bar")
+    @When("the user clicks on <aboutUsMenuItem> within the About Us tab on the menu bar")
     public void when_I_click_on_each_link_in_the_top_nav_bar(@Named("aboutUsMenuItem") String aboutUsMenuItem) {
 		user.clickNavNode(aboutUsMenuItem);
 	}
-    @Then("the <aboutUsMenuItem> pages should open correctly")
+    @Then("the <aboutUsMenuItem> page should open correctly")
     public void then_the_nav_tab_should_open_correctly(@Named("aboutUsMenuItem") String aboutUsMenuItem) {
 		user.shouldSeePage(aboutUsMenuItem);
 	}
     
-    @When("the user clicks on <ourWorkMenuItem> within the top nav panel")
+    @When("the user clicks on <ourWorkMenuItem> within the Our Work tab on the menu bar")
     public void when_I_click_on_each_link_in_the_top_nav_panel(@Named("ourWorkMenuItem") String ourWorkMenuItem) {
 		user.clickNavNode(ourWorkMenuItem);
 	}
-    @Then("the <ourWorkMenuItem> pages should open correctlyy")
-    public void then_the_nav_tab_should_open_correctlyy(@Named("ourWorkMenuItem") String ourWorkMenuItem) {
+    @Then("the <ourWorkMenuItem> page should open correctly")
+    public void then_the_OurWorkMenuItem_tab_should_open_correctly(@Named("ourWorkMenuItem") String ourWorkMenuItem) {
 		user.shouldSeePage(ourWorkMenuItem);
 	}
     
-    @When("the user clicks on <resourcesMenuItem> within the top nav panel")
+    @When("the user clicks on <resourcesMenuItem> within the Resources tab on the menu bar")
     public void when_I_click_on_each_link_in_the_resources_panel(@Named("resourcesMenuItem") String resourcesMenuItem) {
 		user.clickNavNode(resourcesMenuItem);
 	}
-    @Then("the <resourcesMenuItem> pages should open correctlyy")
-    public void then_the_resource_should_open_correctlyy(@Named("resourcesMenuItem") String resourcesMenuItem) {
+    @Then("the <resourcesMenuItem> page should open correctly")
+    public void then_the_resource_should_open_correctly(@Named("resourcesMenuItem") String resourcesMenuItem) {
 		user.shouldSeePage(resourcesMenuItem);
 	}
     
-    @When("the user clicks on <actionMenuItem> within the top nav panel")
+    @When("the user clicks on <actionMenuItem> within the ILAB In Action tab on the menu bar")
     public void when_I_click_on_each_link_in_the_action_panel(@Named("actionMenuItem") String actionMenuItem) {
 		user.clickNavNode(actionMenuItem);
 	}
-    @Then("the <actionMenuItem> pages should open correctlyy")
-    public void then_the_action_should_open_correctlyy(@Named("actionMenuItem") String actionMenuItem) {
+    @Then("the <actionMenuItem> page should open correctly")
+    public void then_the_action_should_open_correctly(@Named("actionMenuItem") String actionMenuItem) {
 		user.shouldSeePage(actionMenuItem);
 	}
     
@@ -137,24 +137,24 @@ public class DailyRegression {
         user.onEBSAPage();
     }
     
-    @When("the user clicks on <ebsaMenuItem> within the top nav bar")
+    @When("the user clicks on <ebsaMenuItem> within the menu bar")
     public void when_I_click_on_each_link_in_the_top_nav(@Named("ebsaMenuItem") String ebsaMenuItem) {
 		user.clickNavNode(ebsaMenuItem);
 	}
-    @Then("the <ebsaMenuItem> pages should open correctly")
+    @Then("the <ebsaMenuItem> page should open correctly")
     public void then_the_ebsa_tab_should_open_correctly(@Named("ebsaMenuItem") String ebsaMenuItem) {
 		user.shouldSeePage(ebsaMenuItem);
 	}
  
-    @When("the user clicks on <aboutUsMenuItem> within the About Us tab")
-    public void when_I_click_on_each_link_in_the_aboutUs_tab(@Named("aboutUsMenuItem") String aboutUsMenuItem) {
-		user.clickNavNode(aboutUsMenuItem);
+    @When("the user clicks on <aboutEBSAMenuItem> within the About Us tab on the menu bar")
+    public void when_I_click_on_each_link_in_the_aboutEBSA_tab(@Named("aboutEBSAMenuItem") String aboutEBSAMenuItem) {
+		user.clickNavNode(aboutEBSAMenuItem);
 	}
-    @Then("the <aboutUsMenuItem> page should open correctly")
-    public void then_the_aboutUs_tab_should_open_correctly(@Named("aboutUsMenuItem") String aboutUsMenuItem) {
-		user.shouldSeePage(aboutUsMenuItem);
+    @Then("the <aboutEBSAMenuItem> page should open correctly")
+    public void then_the_aboutEBSA_tab_should_open_correctly(@Named("aboutEBSAMenuItem") String aboutEBSAMenuItem) {
+		user.shouldSeePage(aboutEBSAMenuItem);
 	}
-    @When("the user clicks on <workFamMenuItem> within the Workers & Families tab")
+    @When("the user clicks on <workFamMenuItem> within the Workers & Families tab on the menu bar")
     public void when_I_click_on_each_link_in_the_workFam_tab(@Named("workFamMenuItem") String workFamMenuItem) {
 		user.clickNavNode(workFamMenuItem);
 	}
@@ -162,7 +162,7 @@ public class DailyRegression {
     public void then_the_workFam_tab_should_open_correctly(@Named("workFamMenuItem") String workFamMenuItem) {
 		user.shouldSeePage(workFamMenuItem);
 	}    
-    @When("the user clicks on <employerAdviserMenuItem> within the Employers & Advisers tab")
+    @When("the user clicks on <employerAdviserMenuItem> within the Employers & Advisers tab on the menu bar")
     public void when_I_click_on_each_link_in_the_employerAdviser_tab(@Named("employerAdviserMenuItem") String employerAdviserMenuItem) {
 		user.clickNavNode(employerAdviserMenuItem);
 	}
@@ -170,7 +170,7 @@ public class DailyRegression {
     public void then_the_employerAdviser_tab_should_open_correctly(@Named("employerAdviserMenuItem") String employerAdviserMenuItem) {
 		user.shouldSeePage(employerAdviserMenuItem);
 	}    
-    @When("the user clicks on <researchersMenuItem> within the Researchers tab")
+    @When("the user clicks on <researchersMenuItem> within the Researchers tab on the menu bar")
     public void when_I_click_on_each_link_in_the_researchers_tab(@Named("researchersMenuItem") String researchersMenuItem) {
 		user.clickNavNode(researchersMenuItem);
 	}
@@ -178,7 +178,7 @@ public class DailyRegression {
     public void then_the__tab_should_open_correctly(@Named("researchersMenuItem") String researchersMenuItem) {
 		user.shouldSeePage(researchersMenuItem);
 	}    
-    @When("the user clicks on <keyTopicMenuItem> within the Key Topics tab")
+    @When("the user clicks on <keyTopicMenuItem> within the Key Topics tab on the menu bar")
     public void when_I_click_on_each_link_in_the_keyTopic_tab(@Named("keyTopicMenuItem") String keyTopicMenuItem) {
 		user.clickNavNode(keyTopicMenuItem);
 	}
@@ -186,7 +186,7 @@ public class DailyRegression {
     public void then_the__keyTopic_should_open_correctly(@Named("keyTopicMenuItem") String keyTopicMenuItem) {
 		user.shouldSeePage(keyTopicMenuItem);
 	}  
-    @When("the user clicks on <lawsregsMenuItem> within the Laws & Regulations tab")
+    @When("the user clicks on <lawsregsMenuItem> within the Laws & Regulations tab on the menu bar")
     public void when_I_click_on_each_link_in_the_lawsregs_tab(@Named("lawsregsMenuItem") String lawsregsMenuItem) {
 		user.clickNavNode(lawsregsMenuItem);
 	}
