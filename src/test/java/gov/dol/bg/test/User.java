@@ -455,11 +455,11 @@ public class User {
 		
 		//In Action
 		case "newsReleases":
-			Assert.assertEquals("Newss Releases", ILABHomepage.pullPageTitle());
+			Assert.assertEquals("News Releases", ILABHomepage.pullPageTitle());
 			break;
 			
 		case "ourRightsOurVoices":
-			Assert.assertEquals("Ourr Rights, Our Voices", ILABHomepage.pullPageTitle());
+			Assert.assertEquals("Our Rights, Our Voices", ILABHomepage.pullPageTitle());
 			break;
 			
 			

@@ -3,7 +3,7 @@ In order to assert that the basic functionality of https://www.dol.gov/agencies/
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta: @skip
+Meta: 
 
 Scenario: Verify the Ask EBSA and EBSA Home menu items
 Meta: 
@@ -17,7 +17,7 @@ Examples:
 |ebsaHomepage|
 
 Scenario: Verify all of the About EBSA tabs from the EBSA page
-Meta: 
+Meta: @skip
 Given the user is on the EBSA home page
 When the user clicks on <aboutEBSAMenuItem> within the About Us tab on the menu bar
 Then the <aboutEBSAMenuItem> page should open correctly
@@ -29,7 +29,7 @@ Examples:
 
 
 Scenario: Verify all of the Workers & Families tabs from the EBSA page
-Meta: 
+Meta: @skip
 Given the user is on the EBSA home page
 When the user clicks on <workFamMenuItem> within the Workers & Families tab on the menu bar
 Then the <workFamMenuItem> page should open correctly
@@ -40,7 +40,7 @@ Examples:
 |separationAndDivorce|
 
 Scenario: Verify all of the Employers & Advisers tabs from the EBSA page
-Meta: 
+Meta: @skip
 Given the user is on the EBSA home page
 When the user clicks on <employerAdviserMenuItem> within the Employers & Advisers tab on the menu bar
 Then the <employerAdviserMenuItem> page should open correctly
@@ -52,7 +52,7 @@ Examples:
 
 
 Scenario: Verify all of the Researchers tabs from the EBSA page
-Meta: 
+Meta: @skip
 Given the user is on the EBSA home page
 When the user clicks on <researchersMenuItem> within the Researchers tab on the menu bar
 Then the <researchersMenuItem> page should open correctly
@@ -63,7 +63,7 @@ Examples:
 |pensionPlan|
 
 Scenario: Verify all of the Key Topics tabs from the EBSA page
-Meta: 
+Meta: @skip
 Given the user is on the EBSA home page
 When the user clicks on <keyTopicMenuItem> within the Key Topics tab on the menu bar
 Then the <keyTopicMenuItem> page should open correctly
@@ -74,7 +74,7 @@ Examples:
 |401k|
 
 Scenario: Verify all of the Laws & Regulations tabs from the EBSA page
-Meta: 
+Meta: @skip
 Given the user is on the EBSA home page
 When the user clicks on <lawsregsMenuItem> within the Laws & Regulations tab on the menu bar
 Then the <lawsregsMenuItem> page should open correctly
