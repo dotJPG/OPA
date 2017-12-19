@@ -6,7 +6,7 @@ I want to run the daily regressions at least twice a day
 Meta: 
 
 Scenario: Verify all of the About Us tabs from the ILAB page
-Meta: @skip
+Meta: 
 Given the user is on the ILAB home page
 When the user clicks on <aboutUsMenuItem> within the About Us tab on the menu bar
 Then the <aboutUsMenuItem> page should open correctly
@@ -18,7 +18,7 @@ Examples:
 |joinTheTeam|
 
 Scenario: Verify all of the Our Work tabs from the ILAB page
-Meta: @skip
+Meta: 
 Given the user is on the ILAB home page
 When the user clicks on <ourWorkMenuItem> within the Our Work tab on the menu bar
 Then the <ourWorkMenuItem> page should open correctly
@@ -29,7 +29,7 @@ Examples:
 |projects|
 
 Scenario: Verify all of the Resources tabs from the ILAB page
-Meta: @skip
+Meta: 
 Given the user is on the ILAB home page
 When the user clicks on <resourcesMenuItem> within the Resources tab on the menu bar
 Then the <resourcesMenuItem> page should open correctly

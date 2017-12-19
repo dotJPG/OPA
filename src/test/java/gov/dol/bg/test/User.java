@@ -122,29 +122,30 @@ public class User {
 	   		
 	   		
 	    case "RSS":
-	    	dolHomepage.rssNavButton.click();
+	    		
+	    	dolHomepage.clickFooterNavButtons(dolHomepage.rssNavButton);
 	    	break;
     	
 	    	
 	    case "Disclaimer":
-	    	dolHomepage.disclaimerNavButton.click();
-	    		break;
+	    	dolHomepage.clickFooterNavButtons(dolHomepage.disclaimerNavButton);
+	    	break;
 	    		
 	    case "NFA":
-	    	dolHomepage.nfaNavButton.click();
-	    		break;
+	    	dolHomepage.clickFooterNavButtons(dolHomepage.nfaNavButton);
+	    	break;
 
 	    case "PSS":
-	    	dolHomepage.pssNavButton.click();
-	    		break;
+	    	dolHomepage.clickFooterNavButtons(dolHomepage.pssNavButton);
+	    	break;
 
 	    case "FOIA":
-	    	dolHomepage.foiaNavButton.click();
-	    		break;
+	    	dolHomepage.clickFooterNavButtons(dolHomepage.foiaNavButton);
+	    	break;
 	    		
 	    case "TTY":
-	    	dolHomepage.ttyNavButton.click();
-	    		break;
+	    	dolHomepage.clickFooterNavButtons(dolHomepage.ttyNavButton);
+	    	break;
 	    		
 	    case "BLOG":
 	    	dolHomepage.blogNavButton.click();
@@ -352,7 +353,7 @@ public class User {
 			Assert.assertEquals("Employee Benefits Security Administration", dolHomepage.pullPageTitle());
 			break;			
 		
-			//case subNav Press
+		//case subNav Press
 		case "Newsroom":
 			Assert.assertEquals("Newsroom", dolHomepage.pullPageTitle());
 			break;
@@ -373,7 +374,7 @@ public class User {
 			break;			
 			
 		case "NFA":
-			Assert.assertEquals("Equal Employment Opportunity Data Posted Pursuant to the No Fear Act", dolHomepage.pullPageTitle());
+			Assert.assertEquals("Overview of the American Recovery and Reinvestment Act of 2009 (Recovery Act)", dolHomepage.pullPageTitle());
 			break;			
 
 		case "PSS":

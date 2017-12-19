@@ -7,7 +7,7 @@ Meta:
 
 
 Scenario: Verify all of the navbar tabs to assert that the pages open correctly
-Meta: @skip
+Meta: 
 Given the user is on the DOL home page
 When the user clicks on <navMenuItem> within the top navigation bar
 Then the <navMenuItem> page should open correctly
@@ -24,7 +24,7 @@ Examples:
 
 
 Scenario: Verify all of the Topics sub-navigation tabs open correctly
-Meta: @skip
+Meta: 
 Given the user is on the DOL home page
 When the user clicks on the <subNavMenuItem> within the top navigation bar
 Then the <subNavMenuItem> page should open correctly
@@ -49,7 +49,7 @@ Examples:
 |EBSA|
 
 Scenario: Verify all of the Press sub-navigation tabs open correctly
-Meta: @skip
+Meta: 
 Given the user is on the DOL home page
 When the user clicks on the <subNavMenuPress> within the Press navigation bar
 Then the <subNavMenuPress> page should open correctly
@@ -61,7 +61,7 @@ Examples:
 |News Letter|
 
 Scenario: Verify all of the Footer navigation links open correctly
-Meta: @skip
+Meta: 
 Given the user is on the DOL home page
 When the user clicks on the <navFooterItem> within the Footer
 Then the <navFooterItem> page should open correctly
@@ -76,7 +76,7 @@ Examples:
 |TTY|
 
 Scenario: Verify all of the Social Media navigation links open correctly
-Meta: @skip
+Meta: 
 Given the user is on the DOL home page
 When the user clicks on the <socMediaLink> link
 Then the <socMediaLink> page should open correctly

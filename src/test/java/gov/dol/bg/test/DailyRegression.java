@@ -76,12 +76,12 @@ public class DailyRegression {
 
     //Social Media
     @When("the user clicks on the <socMediaLink> link")
-    public void the_user_clicks_on_the_navFooterItem_within_the_Press_navigation_barr(@Named("socMediaLink") String socMediaLink) {
+    public void the_user_clicks_on_the_socMediaLink_within_the_Press_navigation_barr(@Named("socMediaLink") String socMediaLink) {
 		user.clickNavNode(socMediaLink);
 	}
 
     @Then("the <socMediaLink> page should open correctly")
-    public void the_navFooterItem_page_should_open_correctlyy(@Named("socMediaLink") String socMediaLink) {
+    public void the_socMediaLink_page_should_open_correctlyy(@Named("socMediaLink") String socMediaLink) {
 		user.shouldSeePage(socMediaLink);
 	}
     

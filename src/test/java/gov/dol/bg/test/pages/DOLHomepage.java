@@ -4,6 +4,7 @@ package gov.dol.bg.test.pages;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -95,7 +96,7 @@ public class DOLHomepage extends PageObject {
 	
 	
 	//nav Footer
-
+	
 	@FindBy(xpath = "//*[@id='site-canvas']/footer/div[2]/div[4]/ul/li[6]/a")
 	public WebElementFacade rssNavButton;
 
@@ -158,7 +159,7 @@ public class DOLHomepage extends PageObject {
     public String verifySocialMedia(){	
     	
     WebElement pageTitle = getDriver().findElement(By.xpath("(//*[@class='ProfileHeaderCard-nameLink u-textInheritColor js-nav'] | "
-     		+ " //*[@id='seo_h1_tag']/div/div/span/div/span[1]/a |"
+     		+ "//*[@id=\"seo_h1_tag\"]/a |"
      		+ "//*[@id='stream-about-section']/div[2]/div[2]/ul/li[1]/h4 |"
      		+ "//*[@id='channel-title'] |"
      		+ "//*[@id='quick_subscribe_new']/h1)"));
@@ -184,6 +185,15 @@ public class DOLHomepage extends PageObject {
         Actions action = new Actions(getDriver());
         action.moveToElement(nav).pause(1000).moveToElement(subNav).click().build().perform();
     }
+    
+    
+    public void clickFooterNavButtons(WebElementFacade nav) {
+    	WebDriver driver = getDriver();
+    	WebElement button = nav;
+    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);
+    	button.click();
+    }
+    
     
     
     public void clickSocialMedia(){
